@@ -1,0 +1,15 @@
+<div class='container'>
+    <h2>All parking locations</h2>
+    <table>
+        <tr>
+            <th>Location</th>
+            <th>Pincode</th>
+        </tr>
+        {{#each all_locations.Sheet1}}
+        <tr>
+            <td>{{this.Area}}</td>
+            <td>{{this.Pincode}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

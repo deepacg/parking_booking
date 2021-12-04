@@ -1,0 +1,57 @@
+
+<div class='container'>
+    <h2>Welcome to parking booking</h2>
+
+<h3>Parking booking</h3>
+    <div class='row'>
+        <form action="/book" method="POST">
+        <div class='col-md-6'>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Location</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select</option>
+                {{#each all_locations.Sheet1}}
+                    <option value="{{this.Area}}">{{this.Area}}</option>
+                    {{!-- <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Give Pincode" value={{this.Pincode}}> --}}
+                {{/each}}
+            </select>
+            </div>
+        </div>
+     
+        <div class='col-md-6'>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Time</label>
+            <label for="exampleFormControlInput1" class="form-label">From</label>
+            <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="Give from time">
+            <label for="exampleFormControlInput1" class="form-label">To</label>
+            <input type="time" class="form-control" id="exampleFormControlInput1" placeholder="Give to time">
+            </div>
+        </div>
+         <div class='col-md-6'>
+            <div class="mb-3">
+            <a href='/user/all_locations' class='btn btn-info'>View all locations</a>
+            </div>
+        </div>
+          <div class='col-md-6'>
+            <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Repeat</label>
+            <select class="form-select" aria-label="Default select example">
+            <option selected>None</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="custom">Custom</option>
+            </select>
+            </div>
+        </div>
+         <div class='col-md-6'>
+            <div class="mb-3">
+            <button type='submit' class='btn btn-success'>Book</button>
+            </div>
+        </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+
